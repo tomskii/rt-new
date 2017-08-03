@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which of these do you have?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="ilr" type="radio" name="resident" value="Indefinite leave to remain" {{ checked('resident','Indefinite leave to remain') }}>
+              <label for="ilr">Indefinite leave to remain</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="naturalisation" type="radio" name="resident" value="Naturalisation" {{ checked('resident','Naturalisation') }}>
+              <label for="naturalisation">Naturalisation</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="abode" type="radio" name="resident" value="Right of abode" {{ checked('resident','Right of abode') }}>
+              <label for="abode">Right of abode</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="indefinite" type="radio" name="resident" value="EEA indefinite leave" {{ checked('resident','EEA indefinite leave') }}>
+              <label for="indefinite">EEA indefinite leave</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="ancestry" type="radio" name="resident" value="UK ancestry" {{ checked('resident','UK ancestry') }}>
+              <label for="ancestry">UK ancestry</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="eeafamily" type="radio" name="resident" value="EEA family permit" {{ checked('resident','EEA family permit') }}>
+              <label for="eeafamily">EEA family permit</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="discretionary" type="radio" name="resident" value="Family member discretionary leave" {{ checked('resident','Family member discretionary leave') }}>
+              <label for="discretionary">Family member discretionary leave</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="protection" type="radio" name="resident" value="Humanitarian protection" {{ checked('resident','Humanitarian protection') }}>
+              <label for="protection">Humanitarian protection</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="outside" type="radio" name="resident" value="Leave outside the rules" {{ checked('resident','Leave outside the rules') }}>
+              <label for="outside">Leave outside the rules</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="email.html">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <form action="/UpdateisThisYourEmail" method="get" class="form">
+
+        <h1 class="heading-medium">
+          Is gabriella.johnson@hotmail.com your email address?
+        </h1>
+
+          <div class="form-group">
+            <fieldset>
+
+              <div class="multiple-choice">
+                <input id="yes" type="radio" name="otheremail" value="Yes" {{ checked("otheremail","Yes") }}>
+                <label for="yes">Yes</label>
+              </div>
+
+              <div class="multiple-choice" data-target="add-other-email">
+                <input id="no" type="radio" name="otheremail" value="No" {{ checked("otheremail","No") }}>
+                <label for="no">No</label>
+              </div>
+
+              <div class="panel panel-border-narrow js-hidden" id="add-other-email">
+                <fieldset>
+                  <div class="form-group">
+                    <label class="form-label-bold" for="email">What is your new email address?</label>
+                    <!--<span class="form-label">Enter these even if they haven’t changed</span>-->
+                    <input class="form-control form-wider" autocomplete="off" type="text" id="email" name="email" value="{{ data['email-check'] }}">
+                  </div>
+                </fieldset>
+              </div>
+            </fieldset>
+          </div>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

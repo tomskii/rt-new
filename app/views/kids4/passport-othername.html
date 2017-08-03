@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <form action="gender" method="post" class="form">
+
+        <h1 class="heading-medium">
+          Has your child ever legally been known by another name?
+        </h1>
+
+          <div class="form-group">
+            <fieldset>
+              <div class="multiple-choice" data-target="add-other-names">
+                <input id="Yes" type="radio" name="othernames" value="Yes" {{ checked('othernames','Yes') }}>
+                <label for="Yes">Yes</label>
+              </div>
+
+              <div class="panel panel-border-narrow js-hidden" id="add-other-names">
+
+                <h2 class="heading-medium">
+                  Your child's previous name
+                </h2>
+
+                <fieldset>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="address-line-1">First and middle names</label>
+                    <span class="form-label">Enter these even if they haven’t changed</span>
+                    <input class="form-control" autocomplete="off" type="text" id="address-line-1" name="otherfirstname" value="{{otherfirstname}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label-bold" for="address-line-1">Last or family name</label>
+                    <span class="form-label">Enter this even if it hasn’t changed</span>
+                    <input class="form-control" autocomplete="off" type="text" id="address-line-1" name="otherlastname" value="{{otherlastname}}">
+                  </div>
+
+                </fieldset>
+
+              </div>
+              <div class="multiple-choice">
+                <input id="No" type="radio" name="othernames" value="No" {{ checked('othernames','No') }}>
+                <label for="No">No</label>
+              </div>
+
+
+
+
+
+            </fieldset>
+          </div>
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+</form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

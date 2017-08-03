@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which of these applies to you?
+      </h1>
+
+      <form action="/UpdateRenewalsPartnerPage" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+
+            <div class="multiple-choice">
+              <input id="british" type="radio" name="partnerpage" value="Spouse or civil partner of a British citizen" {{ checked('partnerpage','Spouse or civil partner of a British citizen') }}>
+              <label for="british">Spouse or civil partner of a British citizen</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="eea" type="radio" name="partnerpage" value="Spouse or civil partner of an EEA citizen" {{ checked('partnerpage','Spouse or civil partner of an EEA citizen') }}>
+              <label for="eea">Spouse or civil partner of an EEA citizen</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="visa" type="radio" name="partnerpage" value="Spouse or partner of someone with a UK visa" {{ checked('partnerpage','Spouse or partner of someone with a UK visa') }}>
+              <label for="visa">Spouse or partner of someone with a UK visa</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="/renewals-it4/update-scenario/email">Continue</a>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

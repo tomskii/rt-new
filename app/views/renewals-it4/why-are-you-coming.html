@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Why are you coming to the UK?
+      </h1>
+
+      <form action="/RenewalsEligible" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+                Select which of these applies to you
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="business" type="radio" name="answer" value="Business visit or to work" {{ checked("answer","Business visit or to work") }}>
+              <label for="business">Business visit or to work</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="tourism" type="radio" name="answer" value="Tourism" {{ checked("answer","Tourism") }}>
+              <label for="tourism">Tourism (including visiting family or friends)</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="study" type="radio" name="answer"  value="Academic visit or to study" {{ checked("answer","Academic visit or to study") }}>
+              <label for="study">Academic visit or to study</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="resident" type="radio" name="answer" value="I'm a resident in the UK" {{ checked("answer","I'm a resident in the UK") }}>
+              <label for="resident">I'm a resident in the UK</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="partner" type="radio" name="answer" value="Join partner for a long stay" {{ checked("answer","Join partner for a long stay") }}>
+              <label for="partner">Join partner for a long stay</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="transit" type="radio" name="answer" value="Passing through the UK (in transit)" {{ checked("answer","Passing through the UK (in transit)") }}>
+              <label for="transit">Passing through the UK (in transit)</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="diplomat" type="radio" name="answer" value="Official diplomatic, government or military business" {{ checked("answer","Official diplomatic, government or military business") }}>
+              <label for="diplomat">Official diplomatic, government or military business</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="medical" type="radio" name="answer" value="Private medical treatment" {{ checked("answer","Private medical treatment") }}>
+              <label for="medical">Private medical treatment</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="married" type="radio" name="answer" value="Get married or enter into a civil partnership" {{ checked("answer","Get married or enter into a civil partnership") }}>
+              <label for="married">Get married or enter into a civil partnership</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

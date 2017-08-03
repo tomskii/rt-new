@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What will you be doing in the UK?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="diplomatictrip" type="radio" name="diplomatnopage" value="Diplomatic business" {{ checked('diplomatnopage','Diplomatic business') }}>
+              <label for="diplomatictrip">Diplomatic business</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="government" type="radio" name="diplomatnopage" value="Government business" {{ checked('diplomatnopage','Government business') }}>
+              <label for="government">Government business</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="military" type="radio" name="diplomatnopage" value="Military service" {{ checked('diplomatnopage','Military service') }}>
+              <label for="military">Military service</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="/renewals-it4/update-scenario/email.html">Continue</a>
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

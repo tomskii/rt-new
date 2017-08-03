@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        What visa, permit or immigration status do they have?
+      </h1>
+
+      <form action="/kids4residentvisastatus" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <div class="multiple-choice">
+              <input id="deptier124" type="radio" name="residentvisastatus" value="Dependant of Tier 1, 2 or 4" {{ checked('residentvisastatus','Dependant of Tier 1, 2 or 4') }}>
+              <label for="deptier124">Dependant of Tier 1, 2 or 4</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="deptier5" type="radio" name="residentvisastatus" value="Dependant of Tier 5" {{ checked('residentvisastatus','Dependant of Tier 5') }}>
+              <label for="deptier5">Dependant of Tier 5</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="ancestry" type="radio" name="residentvisastatus" value=Dependant of UK Ancestry"" {{ checked('residentvisastatus','Dependant of UK Ancestry') }}>
+              <label for="ancestry">Dependant of UK Ancestry</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="ilr" type="radio" name="residentvisastatus" value="Indefinite leave to remain" {{ checked('residentvisastatus','Indefinite leave to remain') }}>
+              <label for="ilr">Indefinite leave to remain</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="naturalisation" type="radio" name="residentvisastatus" value="Naturalisation" {{ checked('residentvisastatus','Naturalisation') }}>
+              <label for="naturalisation">Naturalisation</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="roa" type="radio" name="residentvisastatus" value="Right of abode" {{ checked('residentvisastatus','Right of abode') }}>
+              <label for="roa">Right of abode</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="eea" type="radio" name="residentvisastatus" value="EEA indefinite leave" {{ checked('residentvisastatus','EEA indefinite leave') }}>
+              <label for="eea">EEA indefinite leave</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="othervisa" type="radio" name="residentvisastatus" value="Other visa" {{ checked('residentvisastatus','Other visa') }}>
+              <label for="othervisa">Other visa</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a href="kidsconvictions" class="button">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

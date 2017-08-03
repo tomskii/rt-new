@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Has your passport changed?
+      </h1>
+
+      <form action="/RenewalsPassportChanged" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+          <div class="multiple-choice">
+            <input id="yes" type="radio" name="passportchanged" value="Yes" {{ checked('passportchanged','Yes') }}>
+            <label for="yes">Yes</label>
+          </div>
+          <div class="multiple-choice">
+            <input id="no" type="radio" name="passportchanged" value="No" {{ checked('passportchanged','No') }}>
+            <label for="no">No</label>
+          </div>
+        </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+{% endblock %}

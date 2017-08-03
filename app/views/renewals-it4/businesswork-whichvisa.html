@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Which visa do you have?
+      </h1>
+
+      <form class="form">
+        <div class="form-group">
+          <fieldset>
+
+            <legend class="visuallyhidden">
+              Select which of these applies to you
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="tier1" type="radio" name="businessworkpage" value="Tier 1" {{ checked('businessworkpage','Tier 1') }}>
+              <label for="tier1">Tier 1</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="tier2" type="radio" name="businessworkpage" value="Tier 2" {{ checked('businessworkpage','Tier 2') }}>
+              <label for="tier2">Tier 2</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="yes" type="radio" name="businessworkpage" value="Tier 5 (excluding creative or sporting concessions)" {{ checked('businessworkpage','Tier 5 (excluding creative or sporting concessions)') }}>
+              <label for="yes">Tier 5 (excluding creative or sporting concessions)</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="solerepresentative" type="radio" name="businessworkpage" value="Sole representative" {{ checked('businessworkpage','Sole representative') }}>
+              <label for="solerepresentative">Sole representative</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="ministerofreligion" type="radio" name="businessworkpage" value="Minister of religion" {{ checked('businessworkpage','Minister of religion') }}>
+              <label for="ministerofreligion">Minister of religion</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="civiliancontractor" type="radio" name="businessworkpage" value="Civilian contractor" {{ checked('businessworkpage','Civilian contractor') }}>
+              <label for="civiliancontractor">Civilian contractor</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <a class="button" href="/renewals-it4/email">Continue</a>
+        </div>
+<!-- this is a comment to get a commit -->
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

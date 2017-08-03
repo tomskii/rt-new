@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="javascript:history.go(-1)">Back</a>
+
+      <h1 class="heading-medium">
+        Do they have a visa?
+      </h1>
+
+      <form action="/kids4study-gotvisa" method="get" class="form">
+        <div class="form-group">
+          <fieldset>
+            <div class="multiple-choice">
+              <input id="Yes" type="radio" name="kids4studyvisa" value="Yes" {{ checked('kids2studyvisa','Yes') }}>
+              <label for="Yes">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="No" type="radio" name="kids4studyvisa" value="No" {{ checked('kids2studyvisa','No') }}>
+              <label for="No">No</label>
+            </div>
+
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="form-group">
+
+    <table class="check-your-answers">
+
+      <thead>
+        <tr>
+          <th colspan="2">
+            <h1 class="heading-medium">
+              Check your child's details before continuing
+            </h1>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            Full name
+          </td>
+          <td>
+            {{ data['givennames'] }} {{ data['surname'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-name">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Other names
+          </td>
+          <td>
+            {{ data['otherfirstname'] }} {{ data['otherlastname'] }} {{ data['othernames'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-othername">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Date of birth
+          </td>
+          <td>
+            {{ data['dobday'] }}/{{ data['dobmonth'] }}/{{ data['dobyear'] }}
+          </td>
+          <td class="change-answer">
+            <a href="date-of-birth">
+              Change <span class="visuallyhidden">your Registered Traveller number</span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Gender
+          </td>
+          <td>
+            {{ data['gender'] }}
+          </td>
+          <td class="change-answer">
+            <a href="gender">
+              Change <span class="visuallyhidden">your Registered Traveller number</span>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Passport nationality
+          </td>
+          <td>
+            {{ data['passportNationality'] }}
+          </td>
+          <td class="change-answer">
+            <a href="nationality">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Passport number
+          </td>
+          <td>
+            {{ data['passportnumber'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-number">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Passport expiry date
+          </td>
+          <td>
+            {{ data['expday'] }}/{{ data['expmonth'] }}/{{ data['expyear'] }}
+          </td>
+          <td class="change-answer">
+            <a href="passport-expiry">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Visa, permit or travel purpose
+          </td>
+          <td>
+            {{ data['kidswhy'] }}
+          </td>
+          <td class="change-answer">
+            <a href="why-are-you-coming">
+              Change
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            Criminal convictions
+          </td>
+          <td>
+            No
+          </td>
+          <td class="change-answer">
+            <a href="kidsconvictions">
+              Change
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            Refused entry to the UK
+          </td>
+          <td>
+            No
+          </td>
+          <td class="change-answer">
+            <a href="kidsrestrictions">
+              Change <span class="visuallyhidden">/span>
+            </a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            UK customs penalties
+          </td>
+          <td>
+            No
+          </td>
+          <td class="change-answer">
+            <a href="kidsregulations">
+              Change
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="form-group">
+    <a class="button" href="declaration.html" id="continuebutton">Confirm details</a>
+  </div>
+</main>
+
+{% endblock %}
