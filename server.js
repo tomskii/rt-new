@@ -187,6 +187,19 @@ app.get('/prototype-admin/clear-data', function (req, res) {
   res.render('prototype-admin/clear-data')
 })
 
+
+//clear data extras
+app.get('/kids4/startpages', function (req, res, callback) {
+  req.session.destroy()
+  callback()
+})
+
+app.get('/kids4/sign-in', function (req, res, callback) {
+  req.session.destroy()
+  callback()
+})
+
+
 // Redirect root to /docs when in promo mode.
 if (promoMode === 'true') {
   console.log('Prototype kit running in promo mode')
