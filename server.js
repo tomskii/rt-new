@@ -199,6 +199,11 @@ app.get('/kids4/sign-in', function (req, res, callback) {
   callback()
 })
 
+app.get('/kids4/', function (req, res, callback) {
+  req.session.destroy()
+  callback()
+})
+
 
 // Redirect root to /docs when in promo mode.
 if (promoMode === 'true') {
