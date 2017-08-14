@@ -7,6 +7,11 @@
 {% block content %}
 
 <main id="content" role="main">
+  <div class="grid-row">
+  <div class="column-full">
+    <a class="link-back" href="javascript:history.go(-1)">Back</a>
+    <a class="link-signout" href="/renewals-it4/">Sign out</a>
+
   <div class="form-group">
 
     <table class="check-your-answers">
@@ -109,8 +114,10 @@
     </table>
   </div>
   <div class="form-group">
-    <a class="button" href="declaration" id="continuebutton">Confirm details</a>
+    <a class="button" href="/renewals-it4/update-scenario/declaration" id="continuebutton">Confirm details</a>
   </div>
+</div>
+</div>
 </main>
 
 {% endblock %}
