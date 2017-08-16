@@ -38,11 +38,16 @@
 
 {% block footer_support_links %}
   {% if useAutoStoreData %}
-    <ul>
-      <li>
-        <a href="/prototype-admin/clear-data">Clear data</a>
-      </li>
-    </ul>
+    <div class="footer-meta-inner">
+    		<!-- footerLinks-->
+    	 	<h2 class="visuallyhidden">Support links</h2>
+    	<ul>
+    		<li><a id="footer_about" href="https://www.faster-uk-entry.service.gov.uk/about" target="_blank">About</a></li>
+    	  	<li><a id="footer_tandc" href="https://www.faster-uk-entry.service.gov.uk/termsAndConditions" target="_blank">Terms and conditions</a></li>
+    	  	<li><a id="footer_privacypolicy" href="https://www.faster-uk-entry.service.gov.uk/privacyPolicy" target="_blank">Privacy policy</a></li>
+    	  	<li><a id="footer_cookies" href="https://www.faster-uk-entry.service.gov.uk/cookies" target="_blank">Cookies</a></li>
+    	</ul>
+    </div>
   {% endif %}
 {% endblock %}
 
