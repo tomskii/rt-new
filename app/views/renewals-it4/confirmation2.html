@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Registered Traveller
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight renew">
+        <h1 class="bold-large renew">Your request has been submitted</h1>
+      </div>
+      <p>We have received your payment of £50 (for renewing). We have sent a confirmation email to <a href="mailto:">billsmith@gmail.com{{ data['email-check'] }}</a>.</p>
+  			<!--<p>Please add <a href="mailto:">RTinbox@homeoffice.gsi.gov.uk</a> to your contacts or safe senders list. Otherwise, our emails may go into your junk or spam folder.</p>-->
+
+  		<h2 class="bold-medium">What happens next?</h2>
+
+  		<p>We’ll carry out background checks to see if you’re still eligible for Registered Traveller.</p>
+
+  		<p>We’ll email you within 10 working days to let you know whether your application has been successful.</p>
+
+      <h2 class="bold-medium">Renew your child’s membership</h2>
+
+      <p>You can now renew your child’s membership.</p>
+
+
+      <div class="panel panel-border-wide">
+        <p>You must sign in with your child's Registered Traveller membership number and your child's date of birth.</p>
+      </div>
+
+      <div class="form-group moretop">
+        <a href="/renewals-it4/" class="button">Renew child membership</a>
+      </div>
+
+      <p>This is a new service - your <a href="#">feedback</a> will help us to improve it.</a></p>
+      <p><a href="http://www.gov.uk">Back to GOV.UK</a></p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
